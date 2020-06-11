@@ -22,8 +22,6 @@ public class LoginActivity extends AppCompatActivity { // 로그인 액티비티
                 startActivity(intent);
             }
         });
-
-
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,7 +30,4 @@ public class LoginActivity extends AppCompatActivity { // 로그인 액티비티
             }
         });
     }
-
-
-
 }

@@ -2,6 +2,7 @@ package Project.babyfirst;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,13 +17,15 @@ import app.akexorcist.bluetotohspp.library.DeviceList;
 
 
 public class MainActivity extends AppCompatActivity {
-    private BluetoothSPP bt;
+    public static Context context_main;
+    public static BluetoothSPP bt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bt = new BluetoothSPP(this); //Initializing
+        context_main = this;
 
         if (!bt.isBluetoothAvailable()) { //블루투스 사용 불가
             Toast.makeText(getApplicationContext(), "Bluetooth is not available", Toast.LENGTH_SHORT).show();
@@ -62,10 +65,28 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        Button btnNewAct = (Button) findViewById(R.id.btnnewActivity);
-        btnNewAct.setOnClickListener(new View.OnClickListener() {
+        ImageButton ibtn_led, ibtn_heat;
+        Button btn_link;
+        ibtn_led = findViewById(R.id.btnled);
+        ibtn_heat = findViewById(R.id.btnThemp);
+        btn_link = findViewById(R.id.btnlink);
+        ibtn_led.setOnClickListener(new View.OnClickListener() {    //led 액티비티
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), LEDActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), siteActivity.class);
+                startActivity(intent);
+            }
+        });
+        ibtn_heat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ThempActivity.class);
                 startActivity(intent);
             }
@@ -92,13 +113,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setup() {
-        Button btnled2 = findViewById(R.id.btnled2); //데이터 전송 초록색 LED
-        btnled2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                bt.send("G", true);
-            }
-        });
-        Button btnsound = findViewById(R.id.btnsound); //데이터 전송 소리 출력
+        ImageButton btnsound = findViewById(R.id.btnsound); //데이터 전송 소리 출력
         btnsound.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 bt.send("S", true);

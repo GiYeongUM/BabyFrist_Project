@@ -9,8 +9,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.lang.reflect.Array;
-import java.util.List;
 
 public class siteActivity extends AppCompatActivity {
 
@@ -20,8 +18,8 @@ public class siteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_site);
 
-        final String[] siteList = {"임산부를 위한 뭐시기1", "임산부를 위한 저시기1"};
-        final String[] siteUri = {"http://www.naver.com", "http://www.daum.net"};
+        final String[] siteList = {"해오름", "베베하우스", "임산부닷컴", "베이비센터 코리아", "맘스홀릭 베이비"};
+        final String[] siteUri = {"http://www.haeorum.com/container/?pc=", "https://www.bebehouse.com/", "http://www.imsanboo.com/", "www.babycenterkorea.co.kr", "cafe.naver.com/imsanbu.cafe"};
         listV = findViewById(R.id.listView);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, siteList);
         listV.setAdapter(adapter);

@@ -1,101 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    >
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="160dp"
-        >
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="160dp">
-        <ImageButton
-            android:id="@+id/btnConnect"
-            android:layout_width="64dp"
-            android:layout_height="65dp"
-            android:layout_margin="50dp"
-            android:src="@drawable/bluetooth"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_gravity="center" />
+        android:layout_weight="3"
+        android:background="#ffafbe"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="환영합니다"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="160dp"
-        android:layout_margin="50dp"
-        android:background="#e8008a"
-        >
-
-        <Button
-            android:id="@+id/btnled2"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:layout_gravity="center"
-            android:textSize="18dp"
-            android:text="LED 점등(초록)"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnConnect" />
-
-        <Button
-            android:id="@+id/btnsound"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="사운드 출력"
-            android:textSize="15dp"
-            android:layout_gravity="center"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnConnect" />
-
-    </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="33dp"
-            tools:layout_editor_absoluteY="160dp"></LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="10dp">
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/bluetooth_spp_padding"
+            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btnnewActivity"
+            <ImageButton
+                android:id="@+id/btnConnect"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="좌석 난방 조절">
-            </Button>
+                android:layout_height="123dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/bf_bluetooth" />
+
+            <ImageButton
+                android:id="@+id/btnThemp"
+                android:layout_width="wrap_content"
+                android:layout_height="123dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/bf_heaticon" />
         </LinearLayout>
 
-        <ImageButton
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_margin="10dp"
-            android:src="@drawable/cat" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="#ffafbe"
+                android:gravity="center"
+                android:text="Bluetooth"
+                android:textColor="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="#ffafbe"
+                android:gravity="center"
+                android:text="좌석 난방"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnled"
+                android:layout_width="wrap_content"
+                android:layout_height="129dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/bf_ledicon" />
+
+            <ImageButton
+                android:id="@+id/btnsound"
+                android:layout_width="wrap_content"
+                android:layout_height="129dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/bf_soundicon" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="#ffafbe"
+                android:gravity="center"
+                android:text="LED"
+                android:textColor="@android:color/background_dark" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="0.9"
+                android:background="#ffafbe"
+                android:gravity="center"
+                android:text="Sound"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnlink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#ffafbe"
+                android:text="임산부 커뮤니티"
+                android:textSize="18sp" />
+        </LinearLayout>
+
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

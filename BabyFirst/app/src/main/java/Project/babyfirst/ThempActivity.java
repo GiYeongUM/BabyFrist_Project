@@ -9,7 +9,7 @@ public class ThempActivity extends Activity { // 온도조절 액티비티
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_third);
+        setContentView(R.layout.activity_themp);
 
         Button btnback = (Button) findViewById(R.id.btnback);
         btnback.setOnClickListener(new View.OnClickListener() {
