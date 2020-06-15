@@ -24,6 +24,7 @@
         <activity
             android:name=".LEDActivity"
             android:label="BabyFirst" />
+        <activity android:name=".Info"/>
     </application>
 
 </manifest>
