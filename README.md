@@ -21,8 +21,11 @@
 - [이수빈](https://github.com/gmksf99) : 컴포넌트 및 뷰XML 디자인, 데이터 수집
 </br>
 
-## 앱 디자인
-<img src = "https://github.com/koptimizer/BabyFirst/blob/master/pics/act3.jpg" width = "600px">
+## 앱 설계
+<h1 align="center">
+  <img src = https://github.com/koptimizer/BabyFirst/blob/master/pics/flow.png> <br/>
+  <img src = "https://github.com/koptimizer/BabyFirst/blob/master/pics/act3.jpg" width = "600px"><br/>
+</h1>
 </br>
 
 ## 시연영상
