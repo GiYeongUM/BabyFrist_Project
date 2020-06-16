@@ -18,4 +18,4 @@
 - [이수빈](https://github.com/gmksf99)
 
 ## 시연영상
-```TODO```
+<img>
