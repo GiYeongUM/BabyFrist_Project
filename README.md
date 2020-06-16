@@ -13,14 +13,18 @@
 - 이러한 어려움을 해결하기 위해 개발한 <b>임산부와 임산부좌석을 매칭시켜주는 스마트 임산부 좌석 시스템</b>입니다.
 - 좌석 매칭뿐만 아니라 좌석난방조절 및 임산부에게 도움이 되는 정보, 사이트맵을 제공
 - 임산부석은 Arduino와 C언어, 매칭 시스템은 안드로이드와 Java로 구현.
+</br>
 
 ## 팀원
 - [고광종](https://github.com/koptimizer) : 프로젝트 매니지먼트, 클라이언트 개발
 - [엄기영](https://github.com/GiYeongUM) : 아두이노 설계, 주요 로직 개발 및 DB 구현
 - [이수빈](https://github.com/gmksf99) : 컴포넌트 및 뷰XML 디자인, 데이터 수집
+</br>
 
 ## 앱 디자인
 <img src = "https://github.com/koptimizer/BabyFirst/blob/master/pics/act3.jpg" width = "600px">
+</br>
 
 ## 시연영상
 <img src = "https://github.com/koptimizer/BabyFirst/blob/master/pics/simple.gif">
+</br>
