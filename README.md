@@ -3,7 +3,10 @@
    「 Baby First 」
 </h1>
 <p align="center">
-  <img src = "https://img.shields.io/badge/Language-Java-green"> <img src = "https://img.shields.io/badge/Environment-Android_Q-yellowgreen"> <img src = "https://img.shields.io/badge/License-MIT-blue">
+  <img src = "https://img.shields.io/badge/Language-C-blue"> 
+  <img src = "https://img.shields.io/badge/Language-Java-green"> 
+  <img src = "https://img.shields.io/badge/Environment-Android-yellowgreen">
+  <img src = "https://img.shields.io/badge/Hardware-Arduino-red">
 </p>
 <br/>
 
@@ -12,7 +15,7 @@
 - 대중교통에서 임산부는 가장 배려받아야 할 교통약자이지만 현실은 그렇지 못합니다. 특히, 초기 임산부는 타인이 인지하기 어렵기 때문에 먼저 말을 꺼내지 않는 이상 더욱이 눈치를 봐야합니다.
 - 이러한 어려움을 해결하기 위해 개발한 <b>임산부와 임산부좌석을 매칭시켜주는 스마트 임산부 좌석 시스템</b>입니다.
 - 좌석 매칭뿐만 아니라 좌석난방조절 및 임산부에게 도움이 되는 정보, 사이트맵을 제공합니다.
-- 임산부석은 Arduino와 C언어, 매칭 시스템은 안드로이드와 Java로 구현하였습니다.
+- 임산부석은 Arduino와 C언어, 매칭 시스템은 블루투스로 통신하며 Android에 Java로 구현하였습니다.
 </br>
 
 ## 팀원
