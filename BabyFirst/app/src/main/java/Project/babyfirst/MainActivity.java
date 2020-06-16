@@ -4,12 +4,18 @@ import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
+import android.database.Cursor;
+
+import org.w3c.dom.Text;
+
 import app.akexorcist.bluetotohspp.library.BluetoothSPP;
 import app.akexorcist.bluetotohspp.library.BluetoothState;
 import app.akexorcist.bluetotohspp.library.DeviceList;
@@ -19,6 +25,9 @@ import app.akexorcist.bluetotohspp.library.DeviceList;
 public class MainActivity extends AppCompatActivity {
     public static Context context_main;
     public static BluetoothSPP bt;
+    public static String name;
+
+    TextView maintext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         bt = new BluetoothSPP(this); //Initializing
         context_main = this;
+
+        maintext = (TextView)findViewById(R.id.textView2);
+
 
         if (!bt.isBluetoothAvailable()) { //블루투스 사용 불가
             Toast.makeText(getApplicationContext(), "Bluetooth is not available", Toast.LENGTH_SHORT).show();

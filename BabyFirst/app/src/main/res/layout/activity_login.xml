@@ -58,23 +58,30 @@
             android:ems="10"
             android:hint="  패스워드를 입력해주세요"
             android:inputType="textPersonName"
-            android:paddingLeft="5dp" />
+            android:paddingLeft="5dp"
+            android:password="true" />
 
         <Button
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="#E8ADE4"
+            android:background="#EEE91E76"
             android:text="로그인"
-            android:textSize="18sp" />
+            android:onClick="login"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="OnClick" />
 
         <Button
             android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#E8ADE4"
+            android:background="#EEE91E76"
             android:text="회원가입"
-            android:textSize="18sp" />
+            android:onClick="sign"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="OnClick" />
     </LinearLayout>
 </LinearLayout>

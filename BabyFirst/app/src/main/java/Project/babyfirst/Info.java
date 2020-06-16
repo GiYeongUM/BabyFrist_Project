@@ -11,10 +11,9 @@ public class Info extends AppCompatActivity  {
     CustomerDatabaseHelper databaseHelper;
     String tableName = "Member";
     String databaseName = "LoginDB";
-    String Cnum;
+    String Cid;
     String Cpass;
     String Cname;
-    String Cmajor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

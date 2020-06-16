@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class signUpActivity extends Info {
     EditText ID,PASS,NAME,BIRTH,HOME;
     String TID, Tpass, TNAME,Tbirth,Thome;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
@@ -28,14 +29,14 @@ public class signUpActivity extends Info {
                 TNAME = NAME.getText().toString();
                 Tbirth = BIRTH.getText().toString();
                 Thome = HOME.getText().toString();
-                Cursor cursor = database.rawQuery("SELECT name, id, pass FROM " + tableName, null);
+                Cursor cursor = database.rawQuery("SELECT id, pass, name FROM " + tableName, null);
                 int count = cursor.getCount();
 
                 for(int i=0;i<count;i++) {
                     cursor.moveToNext();
-                    Cname = cursor.getString(0);
-                    Cnum = cursor.getString(1);
-                    Cmajor = cursor.getString(2);
+                    Cid = cursor.getString(0);
+                    Cpass = cursor.getString(1);
+                    Cname = cursor.getString(2);
                 }
                 if (Tpass.length() <6) {
                     Toast.makeText(getApplicationContext(), "비밀번호를 6자리 이상 입력하세요.",
