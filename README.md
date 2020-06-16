@@ -3,6 +3,6 @@
 - 임산부석은 Arduino로, 매칭 시스템은 안드로이드 Application으로 구현.
 
 ## Members 
-- [고광종]()
-- [엄기영]()
-- [이수빈]()
+- [고광종](https://github.com/koptimizer)
+- [엄기영](https://github.com/GiYeongUM)
+- [이수빈](https://github.com/gmksf99)
