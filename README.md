@@ -20,7 +20,7 @@
 
 ## 팀원
 - [고광종](https://github.com/koptimizer) : 프로젝트 매니지먼트, 클라이언트 개발
-- [엄기영](https://github.com/GiYeongUM) : 아두이노 설계, 주요 로직 개발 및 DB 구현
+- [엄기영](https://github.com/GiYeongUM) : 아두이노 설계, 블루투스 통신 개발 및 DB 구현
 - [이수빈](https://github.com/gmksf99) : 컴포넌트 및 뷰XML 디자인, 데이터 수집
 </br>
 
@@ -34,3 +34,4 @@
 ## 시연영상
 <img src = "https://github.com/koptimizer/BabyFirst/blob/master/pics/simple.gif">
 </br>
+
